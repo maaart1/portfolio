@@ -5,11 +5,11 @@ app.set("views", "./views");
 app.set("view engine", "ejs");
 
 app.get("/", (request, response) => {
-    response.render("home");
+    response.render("./views/pages/index.ejs");
 })
 
 app.get("/about", (request, response) => {
-    response.render("about");
+    response.render("./views/pages/");
 })
 
 app.get("*", (request, response) => {
