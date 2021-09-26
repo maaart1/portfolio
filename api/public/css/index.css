@@ -1,106 +1,120 @@
+.back {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://pp.userapi.com/c841122/v841122831/327e/nHt-92F6yc4.jpg) no-repeat top center #efeff1;
+    background-size: cover;
+}
+
+.thx {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+}
+
 nav {
-  margin: 27px auto 0;
-
-  position: relative;
-  width: 550px;
-  height: 50px;
-  background-color: #34495e;
-  border-radius: 8px;
-  font-size: 0;
+    width: 100%;
+    top: 50px;
+    margin-top: 30px;
+    text-align: center;
 }
+
 nav a {
-  font-family: "Calibri", cursive;
-  line-height: 50px;
-  height: 100%;
-  font-size: 15px;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  color: white;
-  cursor: pointer;
-}
-nav .animation {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  z-index: 0;
-  transition: all 0.5s ease 0s;
-  border-radius: 8px;
-}
-a:nth-child(1) {
-  width: 100px;
-}
-a:nth-child(2) {
-  width: 110px;
-}
-a:nth-child(3) {
-  width: 100px;
-}
-a:nth-child(4) {
-  width: 120px;
-}
-a:nth-child(5) {
-  width: 120px;
-}
-nav .start-home,
-a:nth-child(1):hover ~ .animation {
-  width: 100px;
-  left: 0;
-  background-color: #1abc9c;
-}
-nav .start-about,
-a:nth-child(2):hover ~ .animation {
-  width: 110px;
-  left: 100px;
-  background-color: #e74c3c;
-}
-nav .start-blog,
-a:nth-child(3):hover ~ .animation {
-  width: 100px;
-  left: 210px;
-  background-color: #3498db;
-}
-nav .start-portefolio,
-a:nth-child(4):hover ~ .animation {
-  width: 120px;
-  left: 310px;
-  background-color: #9b59b6;
-}
-nav .start-contact,
-a:nth-child(5):hover ~ .animation {
-  width: 120px;
-  left: 430px;
-  background-color: #e67e22;
+    font-family: "Franklin Gothic Medium";
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #16151b;
+    margin: 0 15px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
 }
 
-body {
-  font-size: 12px;
-  font-family: sans-serif;
-  background: #2c3e50;
-}
-/*h1 {
-  text-align: center;
-  margin: 40px 0 40px;
-  text-align: center;
-  font-size: 30px;
-  color: #ecf0f1;
-  text-shadow: 2px 2px 4px #000000;
-  font-family: "Cherry Swash", cursive;
+nav a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #16151b;
+    top: 47%;
+    animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 }
 
-p {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  color: #ecf0f1;
-  font-family: "Cherry Swash", cursive;
-  font-size: 16px;
-}*/
+nav a:hover:before {
+    animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 
-span {
-  color: #2bd6b4;
+}
+
+@keyframes in {
+    0% {
+        width: 0;
+        left: 0;
+        right: auto;
+    }
+    100% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}
+
+@keyframes out {
+    0% {
+        width: 100%;
+        left: auto;
+        right: 0;
+    }
+    100% {
+        width: 0;
+        left: auto;
+        right: 0;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@for $i from 1 through 5 {
+    nav a:nth-child(#{$i}) {
+        animation: show .2s #{$i*0.1+1} s ease 1 both;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.footer {
+    text-decoration: none;
+    color: #16151b;
+    margin: 0 20px;
+    letter-spacing: 1px;
+}
+
+ion-icon {
+    font-size: 2.5em;
+}
+
+body > h1 {
+    font-family: "Franklin Gothic Medium";
+}
+
+main {
+    font-family: "Calibri Light";
 }
