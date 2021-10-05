@@ -5,11 +5,22 @@ class Api extends React.Component {
         return "";
     }
 
-    static get_pages() {
-        fetch("http://localhost:5000/")
+    static get_layouts(route) {
+        fetch(`http://localhost:5000/${route}`)
             .then(response => response.text())
             .then(result => {
-                document.getElementById("root").innerHTML = result;
+                document.getElementById(`${route}`).innerHTML = result;
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
+    static get_pages(route) {
+        fetch(`http://localhost:5000/${route}`)
+            .then(response => response.text())
+            .then(result => {
+                document.getElementById("body").innerHTML = result;
             })
             .catch(error => {
                 console.log(error);

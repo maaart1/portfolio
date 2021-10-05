@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-const fs = require("fs");
 const app = express();
 
 app.use(cors());
@@ -12,7 +11,7 @@ app.set("view engine", "ejs");
 
 // const url_path = `${__dirname}/api/v1`;
 
-app.get("/", (request, response) => {
+app.get("/home", (request, response) => {
     response.render("home");
 })
 
@@ -26,6 +25,14 @@ app.get("/experience", (request, response) => {
 
 app.get("/about", (request, response) => {
     response.render("about");
+})
+
+app.get("/navbar", (request, response) => {
+    response.render("navbar");
+})
+
+app.get("/footer", (request, response) => {
+    response.render("footer");
 })
 
 app.get("*", (request, response) => {
