@@ -1,0 +1,27 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.top-margin {
+    margin-top: 6%;
+}
+
+.yellow {
+    background-color: #ffc107;
+}
+
+body {
+    margin-top: 50px;
+}
+
+.text-presentation {
+    margin-left: 500px;
+}
+
+.profil-size {
+    width: 60%;
+}
+
+.logo-size {
+    width: 20%;
+}
