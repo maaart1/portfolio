@@ -2,10 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.top-margin {
-    margin-top: 6%;
-}
-
 .yellow {
     background-color: #ffc107;
 }
@@ -18,10 +14,73 @@ body {
     margin-left: 500px;
 }
 
+.logo-size {
+    width: 20%;
+}
+
+.flex-item {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-item-project {
+    display: flex;
+    overflow-x: scroll;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+}
+
+.item {
+    flex: 1 0 250px;
+    margin-left: 4%;
+    scroll-snap-align: start;
+    margin-bottom: 2%;
+}
+
+
+.svg-image {
+    margin-top: 2%;
+    width: 8%;
+}
+
+.svg-image-contact {
+    margin-top: 2%;
+    width: 5%;
+}
+.top-margin {
+    margin-top: 2% !important;
+}
+
+.bot-margin {
+    margin-bottom: 4% !important;
+}
+
+.card-hover:hover {
+    transform: scale(1.08);
+}
+
+.card-hover {
+    transition: transform .5s ease;
+}
+
+.profil-size:hover {
+    transform: scale(1.08);
+}
+
 .profil-size {
+    transition: transform .5s ease;
     width: 60%;
 }
 
-.logo-size {
-    width: 20%;
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn {
+    transition: color, background-color .5s ease;
+}
+.m-auto {
+    margin-left: auto;
+    margin-right: auto;
 }
